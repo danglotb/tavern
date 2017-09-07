@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class Seller {
 
-	protected int gold;
+	private int gold;
 
-	protected List<Item> items;
+	private List<Item> items;
 
 	public Seller(int gold, List<Item> itemsToSell) {
 		this.gold = gold;
