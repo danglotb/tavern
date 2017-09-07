@@ -28,7 +28,8 @@ public class Seller {
 		}
 		if (itemToSell != null) {
 			final Integer gold = player.getGold();
-			if (gold.compareTo(itemToSell.price) >= 0) {
+			final int comparison = gold.compareTo(itemToSell.price);
+			if (comparison >= 0) {
 				this.gold = this.gold + itemToSell.price;
 				player.giveGold(itemToSell.price);
 				return itemToSell;
