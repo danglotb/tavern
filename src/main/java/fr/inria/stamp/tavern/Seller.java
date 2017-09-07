@@ -18,21 +18,21 @@ public class Seller {
 		this.items = itemsToSell;
 	}
 
-	public Item sellItem(String name, Player player) {
-		Item itemToSell = null;
-		for (int i = 0; i < this.items.size(); i++) {
-			final Item item = this.items.get(i);
-			if (item.name.equals(name)) {
-				itemToSell = item;
+	public Item sellItem(String s, Player p) {
+		Item i = null;
+		for (int i2 = 0; i2 < this.items.size(); i2++) {
+			final Item i3 = this.items.get(i2);
+			if (i3.name.equals(s)) {
+				i = i3;
 			}
 		}
-		if (itemToSell != null) {
-			final Integer gold = player.getGold();
-			final int comparison = gold.compareTo(itemToSell.price);
-			if (comparison >= 0) {
-				this.gold = this.gold + itemToSell.price;
-				player.giveGold(itemToSell.price);
-				return itemToSell;
+		if (i != null) {
+			final Integer g_p = p.getGold();
+			final int value = g_p.compareTo(i.price);
+			if (value >= 0) {
+				this.gold = this.gold + i.price;
+				p.giveGold(i.price);
+				return i;
 			}
 		}
 		return null;
