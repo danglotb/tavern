@@ -19,8 +19,6 @@ We suppose that you pulled DSpot from GitHub and build it in a parent directory:
 
 `tavern` is this project, pointing on the `master` branch
 
-`tavern-refactor` is this project, pointing on the `regression` branch.
-
 Ensure that on both versions, the existing test suite is passing by running `mvn clean test`.
 
 You can find the property file to give as input to DSpot in `src/main/resources/`.
@@ -37,6 +35,7 @@ javaVersion=8
 filter=fr.inria.stamp.*
 #path to the output folder
 outputDirectory=output
+#following properties are used by the ChangeDetectorSelector
 configPath=src/main/resources/tavern.properties
 folderPath=../tavern-refactor
 ```
@@ -79,12 +78,12 @@ You see a failing test. This test encodes the regression introduces during the r
 
 ### Details on the command and the customization of DSpot's execution:
 
-`--path-to-properties ../tavern/src/main/resources/tavern.properties` ? Specifies the path the property file.
-`--iteration 2` ? Number of time that the DSpot's main loop will be applied.
-`--test fr.inria.stamp.MainTest` ? The test class **fr.inria.stamp.MainTest** (full qualified name) to be amplified.
-`--cases test` ? The test method (test case) named **test** of the specified test class to be amplified.
-`--amplifiers NumberLiteralAmplifier` ? Class name of the amplifier used to modify input of the test.
-`--test-criterion PitMutantScoreSelector` ? Class name of the selector used to filter which amplified test DSpot must keep.
+* `--path-to-properties ../tavern/src/main/resources/tavern.properties` &#10137; Specifies the path the property file.
+* `--iteration 2` &#10137; Number of time that the DSpot's main loop will be applied.
+* `--test fr.inria.stamp.MainTest` &#10137; The test class **fr.inria.stamp.MainTest** (full qualified name) to be amplified.
+* `--cases test` &#10137; The test method (test case) named **test** of the specified test class to be amplified.
+* `--amplifiers NumberLiteralAmplifier` &#10137; Class name of the amplifier used to modify input of the test.
+* `--test-criterion PitMutantScoreSelector` &#10137; Class name of the selector used to filter which amplified test DSpot must keep.
 
 ### Mutation analysis results
 
