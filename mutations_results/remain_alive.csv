@@ -1,0 +1,2 @@
+Seller.java,fr.inria.stamp.tavern.Seller,org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF,sellItem,25,SURVIVED,none
+Seller.java,fr.inria.stamp.tavern.Seller,org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF,sellItem,29,SURVIVED,none
