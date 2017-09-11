@@ -12,10 +12,16 @@ public class Player {
 
 	private int gold;
 	private List<Item> items;
+	private String name;
 
-	public Player(int gold) {
+	public Player(String name, int gold) {
+		this.name = name;
 		this.gold = gold;
 		this.items = new ArrayList<>();
+	}
+
+	public String getName() {
+		return this.name;
 	}
 
 	public int getGold() {
