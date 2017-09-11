@@ -1,4 +1,7 @@
 Seller.java,fr.inria.stamp.tavern.Seller,org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator,sellItem,32,SURVIVED,none
 Seller.java,fr.inria.stamp.tavern.Seller,org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator,sellItem,31,SURVIVED,none
 Seller.java,fr.inria.stamp.tavern.Seller,org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_IF,sellItem,32,SURVIVED,none
-Player.java,fr.inria.stamp.tavern.Player,org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF,buyItem,31,SURVIVED,none
+Player.java,fr.inria.stamp.tavern.Player,org.pitest.mutationtest.engine.gregor.mutators.experimental.MemberVariableMutator,<init>,18,SURVIVED,none
+Player.java,fr.inria.stamp.tavern.Player,org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF,buyItem,37,SURVIVED,none
+Seller.java,fr.inria.stamp.tavern.Seller,org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator,sellItem,38,NO_COVERAGE,none
+Player.java,fr.inria.stamp.tavern.Player,org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator,getName,24,NO_COVERAGE,none
