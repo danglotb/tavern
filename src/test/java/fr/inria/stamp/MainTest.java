@@ -23,7 +23,7 @@ public class MainTest {
 		Player player = new Player("Timoleon", 1000);
 
 		assertEquals("Player{gold=1000, items=[]}", player.toString());
-		assertEquals("Seller{gold=100, items=[Potion,]}", seller.toString());
+		assertEquals("Seller{gold=100, items=[Potion]}", seller.toString());
 
 		player.buyItem("Potion", seller);
 
