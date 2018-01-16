@@ -29,11 +29,16 @@ public class Seller {
 		if (i != null) {
 			final Integer g_p = p.getGold();
 			final int value = g_p.compareTo(i.price);
-			if (value >= 0) {
+			if (value == 0) {
 				this.gold = this.gold + i.price;
 				p.giveGold(i.price);
 				return i;
 			}
+            if (value > 0) {
+                this.gold = this.gold + i.price;
+                p.giveGold(i.price);
+                return i;
+            }
 		}
 		return null;
 	}
