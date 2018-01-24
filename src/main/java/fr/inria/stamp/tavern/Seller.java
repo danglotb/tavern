@@ -38,11 +38,11 @@ public class Seller {
 		return null;
 	}
 
-	@Override
-	public String toString() {
-		return "Seller{" +
-				"gold=" + gold +
-				", items=" + items +
-				'}';
+	public int getGold() {
+		return gold;
+	}
+
+	public List<Item> getItems() {
+		return items;
 	}
 }

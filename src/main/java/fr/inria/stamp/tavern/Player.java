@@ -39,11 +39,7 @@ public class Player {
 		}
 	}
 
-	@Override
-	public String toString() {
-		return "Player{" +
-				"gold=" + gold +
-				", items=" + items +
-				'}';
+	public List<Item> getItems() {
+		return items;
 	}
 }
