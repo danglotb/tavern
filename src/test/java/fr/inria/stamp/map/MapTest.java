@@ -45,7 +45,7 @@ public class MapTest {
         final Map map = new Map(20, 20);
         assertArrayEquals(new int[]{1,1}, map.getNewPositionIfMoveFromTo(0, 0, 1, 1));
         assertArrayEquals(new int[]{0,0}, map.getNewPositionIfMoveFromTo(1, 1, -1, -1));
-        assertArrayEquals(new int[]{}, map.getNewPositionIfMoveFromTo(0, 0, -1, -1));
+        assertArrayEquals(new int[]{19,19}, map.getNewPositionIfMoveFromTo(0, 0, -1, -1));
     }
 
 }
