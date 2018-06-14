@@ -25,11 +25,18 @@ public class Map {
     }
 
     public int[] getNewPositionIfMoveFromTo(int xFrom, int yFrom, int offsetX, int offsetY) {
-        if (!canMoveTo(xFrom, yFrom, offsetX, offsetY)) {
-            return new int[0];
-        } else {
-            return new int[]{xFrom + offsetX, yFrom + offsetY};
+        int newX = xFrom + offsetX;
+        if (newX < 0){
+            newX = -1;
         }
+        int newY = yFrom + offsetY;
+        if (newY < 0){
+            newY = -1;
+        }
+        if (newX == -1 || newY == -1) {
+            return new int[]{};
+        }
+        return new int[]{newX, newY};
     }
 
     public int getWidth() {
