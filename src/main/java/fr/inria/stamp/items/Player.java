@@ -42,6 +42,7 @@ public class Player {
                     this.getSword().sharp();
                     if (budget % 5 == 0) {
                         this.getSword().moreSteel();
+                        this.getSword().enlarge();
                     }
                     budget--;
                 }

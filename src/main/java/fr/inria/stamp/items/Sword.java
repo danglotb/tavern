@@ -31,6 +31,7 @@ public class Sword {
     public void enlarge() {
         if (this.player.getTypeClass() == -1) {
             this.size++;
+            this.weight++;
         } else {
             this.size++;
         }
@@ -40,6 +41,7 @@ public class Sword {
     public void moreSteel() {
         if (this.player.getTypeClass() == -1) {
             this.weight++;
+            this.damage++;
         } else {
             this.weight++;
         }
