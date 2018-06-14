@@ -20,16 +20,21 @@ public class Map {
                 y >= 0 && y < height;
     }
 
+    @Deprecated
     public boolean canMoveTo(int xFrom, int yFrom, int offsetX, int offsetY) {
         return isInMap(xFrom + offsetX, yFrom + offsetY);
     }
 
     public int[] getNewPositionIfMoveFromTo(int xFrom, int yFrom, int offsetX, int offsetY) {
-        if (!canMoveTo(xFrom, yFrom, offsetX, offsetY)) {
-            return new int[0];
-        } else {
-            return new int[]{xFrom + offsetX, yFrom + offsetY};
+        int newX = xFrom + offsetX;
+        if (newX < 0){
+            newX += this.width;
         }
+        int newY = yFrom + offsetY;
+        if (newY < 0){
+            newY += this.height;
+        }
+        return new int[]{newX, newY};
     }
 
     public int getWidth() {
