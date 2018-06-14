@@ -24,6 +24,14 @@ public class Map {
         return isInMap(xFrom + offsetX, yFrom + offsetY);
     }
 
+    public int[] getNewPositionIfMoveFromTo(int xFrom, int yFrom, int offsetX, int offsetY) {
+        if (!canMoveTo(xFrom, yFrom, offsetX, offsetY)) {
+            return new int[0];
+        } else {
+            return new int[]{xFrom + offsetX, yFrom + offsetY};
+        }
+    }
+
     public int getWidth() {
         return width;
     }

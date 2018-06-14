@@ -2,6 +2,7 @@ package fr.inria.stamp.map;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -38,4 +39,13 @@ public class MapTest {
         assertFalse(map.isInMap(20, 20));
         assertFalse(map.isInMap(-1, -1));
     }
+
+    @Test
+    public void testGetNewPositionIfMoveFromTo() throws Exception {
+        final Map map = new Map(20, 20);
+        assertArrayEquals(new int[]{1,1}, map.getNewPositionIfMoveFromTo(0, 0, 1, 1));
+        assertArrayEquals(new int[]{0,0}, map.getNewPositionIfMoveFromTo(1, 1, -1, -1));
+        assertArrayEquals(new int[]{}, map.getNewPositionIfMoveFromTo(0, 0, -1, -1));
+    }
+
 }
