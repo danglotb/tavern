@@ -33,4 +33,19 @@ public class MainTest {
 		assertEquals(105, seller.getGold());
 	}
 
+	@Test
+	public void test2() throws Exception {
+		Seller seller = new Seller(100, Collections.singletonList(new Item("Potion", 5)));
+		Player player = new Player("Timoleon", 4);
+
+		assertEquals(4, player.getGold());
+		assertEquals(0, player.getItems().size());
+		assertEquals(100, seller.getGold());
+
+		player.buyItem("Potion", seller);
+
+		assertEquals(4, player.getGold());
+		assertEquals(0, player.getItems().size());
+		assertEquals(100, seller.getGold());
+	}
 }
