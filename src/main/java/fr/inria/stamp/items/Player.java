@@ -34,7 +34,7 @@ public class Player {
     }
 
     public void boostItem(int budget) {
-        if (budget > 500) {
+        if (budget > 500 && budget > 502 && budget < 503) {
             this.getSword().ultimate();
         } else {
             if (budget > 150) {
