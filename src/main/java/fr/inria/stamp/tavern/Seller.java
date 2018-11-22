@@ -32,6 +32,14 @@ public class Seller {
 		return null;
 	}
 
+	public int getGold() {
+		return gold;
+	}
+
+	public List<Item> getItems() {
+		return items;
+	}
+
 	@Override
 	public String toString() {
 		return "Seller{" +

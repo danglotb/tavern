@@ -39,6 +39,10 @@ public class Player {
 		}
 	}
 
+	public List<Item> getItems() {
+		return items;
+	}
+
 	@Override
 	public String toString() {
 		return "Player{" +
